@@ -1,0 +1,15 @@
+config.json
+package-lock.json
+node_modules
+.DS_Store
+.idea
+.vscode
+.eslintcache
+dist
+logs
+.cache-loader
+lerna-debug.log
+package.json.lerna_backup
+yarn-error.log
+lib
+latest_shell.sh

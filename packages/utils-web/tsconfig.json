@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "outDir": "dist",
+    "strict": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "lib": ["DOM", "es2017"],
+    "noImplicitThis": false,
+    "baseUrl": "../../",
+    "paths": {
+      "@ww/*": ["packages/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

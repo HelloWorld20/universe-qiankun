@@ -1,0 +1,10 @@
+{
+  "cos": {
+    "name": "name",
+    "SecretId": "SecretId",
+    "SecretKey": "SecretKey",
+    "Region": "ap-beijing",
+    "Bucket": "name-1234567890"
+  },
+  "cdnPrefix": "//name-1234567890.cos.ap-beijing.myqcloud.com/app/name/"
+}

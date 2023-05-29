@@ -1,0 +1,21 @@
+{
+  "name": "superapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "latest": "node scripts/start.js latest",
+    "clean": "npx rimraf node_modules packages/*/node_modules",
+    "test": "cd packages/static-apart-radar && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "chalk": "^4.1.0",
+    "inquirer": "^7.3.3",
+    "shelljs": "^0.8.4"
+  }
+}

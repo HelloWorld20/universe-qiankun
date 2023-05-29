@@ -1,0 +1,19 @@
+{
+  "name": "@ww/utils-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch -p tsconfig.lib.json",
+    "build": "tsc -p tsconfig.lib.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "18.6.4",
+    "axios": "^0.27.2",
+    "typescript": "4.7.4"
+  }
+}
