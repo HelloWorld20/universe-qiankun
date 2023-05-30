@@ -1,3 +1,12 @@
+/*
+ * @Todo: 请补充模块描述
+ * 
+ * @Author: weijianghong
+ * @Date: 2023-05-30 18:44:14
+ * 
+ * Copyright © 2014-2023 Rabbitpre.com. All Rights Reserved.
+ */
+
 const { webpackConfig } = require("@ww/tools-build-react");
 const path = require("path");
 
@@ -30,7 +39,7 @@ const config = webpackConfig(
       ],
     },
     devServer: {
-      port: 3000,
+      port: 3010,
     },
   },
   path.resolve(__dirname, "./config.json")

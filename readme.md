@@ -6,7 +6,7 @@
 
 ## 运行
 
-yarn start
+pnpm start
 
 询问试启动项目
 

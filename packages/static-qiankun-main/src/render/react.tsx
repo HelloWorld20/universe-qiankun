@@ -10,14 +10,25 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+import './react.css'
+
 /**
  * 渲染子应用，qiankun需要一个入口。此处渲染一个<div id="subapp-viewport" />，子应用会挂载到这个节点上
  */
 function Render(props: any) {
   const { loading } = props;
 
+  function push(subapp: string) {
+    history.pushState(null, subapp, subapp);
+  }
+
   return (
     <>
+      <p>点击切换子应用👇</p>
+      <ul className="side-menu">
+        <li onClick={() => push("/child")}>child</li>
+        <li onClick={() => push("/child2")}>child2</li>
+      </ul>
       {loading && <h4 className="subapp-loading">Loading...</h4>}
       <div id="subapp-viewport" />
     </>

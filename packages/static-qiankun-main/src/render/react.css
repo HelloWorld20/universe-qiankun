@@ -1,0 +1,4 @@
+.side-menu li {
+  text-decoration: underline;
+  cursor: pointer;
+}

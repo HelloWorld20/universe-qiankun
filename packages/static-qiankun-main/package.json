@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.3.4",
-    "@ww/lib-qiankun-es": "workspace:^1.0.0",
     "@ww/tools-build-react": "workspace:^1.0.0",
     "@ww/utils-web": "workspace:^1.0.0",
     "antd": "4.10.2",

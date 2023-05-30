@@ -14,18 +14,6 @@ importers:
       inquirer: 7.3.3
       shelljs: 0.8.5
 
-  packages/lib-qiankun-es:
-    specifiers:
-      '@babel/runtime': ^7.3.4
-      import-html-entry: ^1.14.6
-      lodash: ^4.17.21
-      single-spa: ^5.9.4
-    dependencies:
-      '@babel/runtime': 7.18.9
-      import-html-entry: 1.14.6
-      lodash: 4.17.21
-      single-spa: 5.9.4
-
   packages/static-qiankun-child:
     specifiers:
       '@amap/amap-jsapi-loader': ^1.0.1
@@ -34,7 +22,6 @@ importers:
       '@types/node': ^18.6.4
       '@types/react': ^18.0.16
       '@types/react-dom': ^18.0.6
-      '@ww/lib-qiankun-es': workspace:^1.0.0
       '@ww/tools-build-react': workspace:^1.0.0
       '@ww/utils-web': workspace:^1.0.0
       antd: 4.10.2
@@ -51,6 +38,7 @@ importers:
       react-dom: ^18.2.0
       react-router-dom: 6.3.0
       style-loader: ^0.23.1
+      swr: ^2.1.5
       thread-loader: ^2.1.2
       ts-loader: ^5.3.3
       typescript: ^4.7.4
@@ -59,7 +47,6 @@ importers:
       webpack-dev-server: ^4.15.0
     dependencies:
       '@babel/core': 7.18.10
-      '@ww/lib-qiankun-es': link:../lib-qiankun-es
       '@ww/tools-build-react': link:../tools-build-react
       '@ww/utils-web': link:../utils-web
       antd: 4.10.2_biqbaboplfbrettd7655fr4n2y
@@ -69,6 +56,70 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+      swr: 2.1.5_react@18.2.0
+      typescript: 4.7.4
+    devDependencies:
+      '@amap/amap-jsapi-loader': 1.0.1
+      '@ant-design/icons': 4.7.0_biqbaboplfbrettd7655fr4n2y
+      '@types/node': 18.6.4
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      babel-loader: 8.2.5_nyxnpd4ycbxnk6clbadb6p27ma
+      cache-loader: 2.0.1_webpack@5.83.1
+      css-loader: 2.1.1_webpack@5.83.1
+      html-loader: 0.5.5
+      less-loader: 4.1.0_less@3.0.0+webpack@5.83.1
+      postcss-loader: 3.0.0
+      style-loader: 0.23.1
+      thread-loader: 2.1.3_webpack@5.83.1
+      ts-loader: 5.4.6_typescript@4.7.4
+      webpack: 5.83.1_webpack-cli@5.1.1
+      webpack-cli: 5.1.1_od47pg6xo4eabjjqkcxsklqcb4
+      webpack-dev-server: 4.15.0_y6cof5pr3x74pvpp7f222gugwq
+
+  packages/static-qiankun-child2:
+    specifiers:
+      '@amap/amap-jsapi-loader': ^1.0.1
+      '@ant-design/icons': ^4.5.0
+      '@babel/core': ^7.3.4
+      '@types/node': ^18.6.4
+      '@types/react': ^18.0.16
+      '@types/react-dom': ^18.0.6
+      '@ww/tools-build-react': workspace:^1.0.0
+      '@ww/utils-web': workspace:^1.0.0
+      antd: 4.10.2
+      babel-loader: ^8.0.5
+      cache-loader: ^2.0.1
+      css-loader: ^2.1.1
+      echarts: ^5.3.3
+      html-loader: ^0.5.5
+      html-webpack-plugin: ^5.5.1
+      less: 3.0.0
+      less-loader: ^4.1.0
+      postcss-loader: ^3.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-router-dom: 6.3.0
+      style-loader: ^0.23.1
+      swr: ^2.1.5
+      thread-loader: ^2.1.2
+      ts-loader: ^5.3.3
+      typescript: ^4.7.4
+      webpack: 5.83.1
+      webpack-cli: ^5.1.1
+      webpack-dev-server: ^4.15.0
+    dependencies:
+      '@babel/core': 7.18.10
+      '@ww/tools-build-react': link:../tools-build-react
+      '@ww/utils-web': link:../utils-web
+      antd: 4.10.2_biqbaboplfbrettd7655fr4n2y
+      echarts: 5.3.3
+      html-webpack-plugin: 5.5.1_webpack@5.83.1
+      less: 3.0.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+      swr: 2.1.5_react@18.2.0
       typescript: 4.7.4
     devDependencies:
       '@amap/amap-jsapi-loader': 1.0.1
@@ -97,7 +148,6 @@ importers:
       '@types/node': ^18.6.4
       '@types/react': ^18.0.16
       '@types/react-dom': ^18.0.6
-      '@ww/lib-qiankun-es': workspace:^1.0.0
       '@ww/tools-build-react': workspace:^1.0.0
       '@ww/utils-web': workspace:^1.0.0
       antd: 4.10.2
@@ -123,7 +173,6 @@ importers:
       webpack-dev-server: ^4.15.0
     dependencies:
       '@babel/core': 7.18.10
-      '@ww/lib-qiankun-es': link:../lib-qiankun-es
       '@ww/tools-build-react': link:../tools-build-react
       '@ww/utils-web': link:../utils-web
       antd: 4.10.2_biqbaboplfbrettd7655fr4n2y
@@ -8112,6 +8161,15 @@ packages:
       util.promisify: 1.0.1
     dev: false
 
+  /swr/2.1.5_react@18.2.0:
+    resolution: {integrity: sha512-/OhfZMcEpuz77KavXST5q6XE9nrOBOVcBLWjMT+oAE/kQHyE3PASrevXCtQDZ8aamntOfFkbVJp7Il9tNBQWrw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
   /tapable/1.1.3:
     resolution: {integrity: sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==}
     engines: {node: '>=6'}
@@ -8482,6 +8540,14 @@ packages:
       mime: 2.6.0
       schema-utils: 1.0.0
       webpack: 5.83.1_webpack-cli@5.1.1
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /use/3.1.1:

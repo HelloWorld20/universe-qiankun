@@ -21,14 +21,21 @@ const loader = (loading: boolean) => render({ loading });
 
 registerMicroApps([
   {
-    name: "react16",
-    entry: "//localhost:7100",
+    name: "child",
+    entry: "//localhost:3000",
     container: "#subapp-viewport",
     loader,
-    activeRule: "/react16",
+    activeRule: "/child",
+  },
+  {
+    name: "child2",
+    entry: "//localhost:3010",
+    container: "#subapp-viewport",
+    loader,
+    activeRule: "/child2",
   },
 ]);
 
-setDefaultMountApp("/react16");
+setDefaultMountApp("/child");
 
 start();
