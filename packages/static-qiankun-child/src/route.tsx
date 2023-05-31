@@ -1,9 +1,9 @@
 /*
  * @Todo: 请补充模块描述
- * 
+ *
  * @Author: weijianghong
  * @Date: 2023-05-30 18:29:56
- * 
+ *
  * Copyright © 2014-2023 Rabbitpre.com. All Rights Reserved.
  */
 
@@ -14,6 +14,7 @@ import App from "./App";
 import SWR from "./pages/swr";
 import Storage from "./pages/localstorage";
 import SwrMultiChild from "./pages/swr/multi-child";
+import ReduxDemo from "./pages/redux-demo";
 
 export default function () {
   return (
@@ -24,6 +25,7 @@ export default function () {
           <Route path="/storage" element={<Storage />}></Route>
           <Route path="/swr" element={<SWR />}></Route>
           <Route path="/swr/multi-child" element={<SwrMultiChild />}></Route>
+          <Route path="/redux-demo" element={<ReduxDemo />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

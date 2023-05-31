@@ -10,6 +10,7 @@
 import React from "react";
 // import { unmountComponentAtNode } from "react-dom";
 import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
 // import ReactDOM from "react-dom";
 import Route from "./route";
 
@@ -28,7 +29,11 @@ function getRoot(container: any) {
 // //将渲染过程封装，以便使用
 function render(props: any) {
   const { container } = props;
-  getRoot(container).render(<Route />);
+  getRoot(container).render(
+    <Provider store={props.store}>
+      <Route />
+    </Provider>
+  );
 }
 
 export async function bootstrap() {
@@ -36,7 +41,8 @@ export async function bootstrap() {
 }
 
 export async function mount(props: any) {
-  console.log("mount", props);
+  console.log("child mount", props);
+
   render(props);
 }
 

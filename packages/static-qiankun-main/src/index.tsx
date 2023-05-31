@@ -7,11 +7,9 @@
  * Copyright © 2014-2023 Rabbitpre.com. All Rights Reserved.
  */
 
-import {
-  start,
-  registerMicroApps,
-  setDefaultMountApp,
-} from "qiankun";
+import { start, registerMicroApps, setDefaultMountApp } from "qiankun";
+
+import store from "./store";
 
 import render from "./render/react";
 
@@ -24,6 +22,7 @@ registerMicroApps([
     name: "child",
     entry: "//localhost:3000",
     container: "#subapp-viewport",
+    props: { store },
     loader,
     activeRule: "/child",
   },
@@ -31,6 +30,7 @@ registerMicroApps([
     name: "child2",
     entry: "//localhost:3010",
     container: "#subapp-viewport",
+    props: { store },
     loader,
     activeRule: "/child2",
   },
