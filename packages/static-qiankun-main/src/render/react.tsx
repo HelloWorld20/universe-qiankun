@@ -26,7 +26,7 @@ function Render(props: any) {
 
   return (
     <>
-      <p>点击切换子应用👇</p>
+      <p className="parent-style">点击切换子应用👇</p>
       <ul className="side-menu">
         <li onClick={() => push("/child")}>child</li>
         <li onClick={() => push("/child2")}>child2</li>

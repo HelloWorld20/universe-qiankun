@@ -2,3 +2,16 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.parent-style {
+  color: green;
+}
+
+/* child-style 用来测试是否影响子应用 */
+.child-style {
+  border: 1px solid !important;
+}
+
+.child-style h2 {
+  color: red !important;
+}
