@@ -1,0 +1,12 @@
+.child-style {
+  border: 1px dashed;
+}
+
+.child-style h2 {
+  color: green;
+}
+
+/* 影响主应用样式测试 */
+.parent-style {
+  color: red !important;
+}

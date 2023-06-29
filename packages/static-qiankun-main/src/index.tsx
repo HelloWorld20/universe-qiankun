@@ -20,21 +20,21 @@ const loader = (loading: boolean) => render({ loading });
 registerMicroApps([
   {
     name: "child",
-    entry: "//localhost:3000",
+    entry: "//localhost:3001",
     container: "#subapp-viewport",
     props: { store },
     loader, // loading 状态发生变化时会调用的方法。
     activeRule: "/child",
   },
   // TODO: 动态监测已启动的子应用才开启。
-  // {
-  //   name: "child2",
-  //   entry: "//localhost:3010",
-  //   container: "#subapp-viewport",
-  //   props: { store },
-  //   loader,
-  //   activeRule: "/child2",
-  // },
+  {
+    name: "child2",
+    entry: "//localhost:3002",
+    container: "#subapp-viewport",
+    props: { store },
+    loader,
+    activeRule: "/child2",
+  },
 ]);
 
 setDefaultMountApp("/child");

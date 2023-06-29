@@ -23,6 +23,8 @@ module.exports = {
     clean: true,
     filename: "[name].[hash:8].js",
     publicPath: "http://localhost:8081/",
+    // publicPath:
+    //   "https://test-1258538316.cos.ap-guangzhou.myqcloud.com/module-federation/static-mf-app/",
     clean: true,
   },
   resolve: {
@@ -100,6 +102,8 @@ module.exports = {
       filename: "remoteEntry.js", // 导出的文件名
       remotes: {
         utils_web_app: "utils_web_app@http://localhost:8080/remoteEntry.js",
+        // utils_web_app:
+        //   "utils_web_app@https://test-1258538316.cos.ap-guangzhou.myqcloud.com/module-federation/ww-utils-web/remoteEntry.js",
       },
       //   依赖的模块
       //   remotes: {

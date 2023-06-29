@@ -30,7 +30,7 @@ const config = webpackConfig(
       ],
     },
     devServer: {
-      port: 3000,
+      port: 3001,
     },
   },
   path.resolve(__dirname, "./config.json")

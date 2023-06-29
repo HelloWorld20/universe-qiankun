@@ -15,7 +15,6 @@
     "@babel/core": "^7.3.4",
     "@reduxjs/toolkit": "^1.9.5",
     "@ww/tools-build-react": "workspace:^1.0.0",
-    "@ww/utils-web": "workspace:^1.0.0",
     "antd": "4.10.2",
     "echarts": "^5.3.3",
     "html-webpack-plugin": "^5.5.1",

@@ -36,23 +36,10 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        // exclude: /node_modules\/(?!@fe\/)/,
-        // include: [
-        //   configs.srcDir,
-        //   // path.resolve(configs.srcDir, '../node_modules/@fe'),
-        //   // ...configs.loaderInclude,
-        // ],
         use: [
           "cache-loader",
           "thread-loader",
           "babel-loader",
-          // {
-          //   loader: 'babel-loader',
-          //   options: {
-          //     cwd: path.resolve(__dirname, '../'),
-          //     cacheDirectory: true,
-          //   },
-          // },
           {
             loader: "ts-loader",
             options: {

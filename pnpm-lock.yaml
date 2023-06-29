@@ -231,7 +231,6 @@ importers:
       '@types/react': ^18.0.16
       '@types/react-dom': ^18.0.6
       '@ww/tools-build-react': workspace:^1.0.0
-      '@ww/utils-web': workspace:^1.0.0
       antd: 4.10.2
       babel-loader: ^8.0.5
       cache-loader: ^2.0.1
@@ -258,7 +257,6 @@ importers:
       '@babel/core': 7.18.10
       '@reduxjs/toolkit': 1.9.5_react@18.2.0
       '@ww/tools-build-react': link:../tools-build-react
-      '@ww/utils-web': link:../utils-web
       antd: 4.10.2_biqbaboplfbrettd7655fr4n2y
       echarts: 5.3.3
       html-webpack-plugin: 5.5.1_webpack@5.83.1

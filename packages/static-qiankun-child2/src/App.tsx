@@ -6,10 +6,10 @@ export default function App() {
     <>
       <ul>
         <li>
-          <Link to="/swr">swr</Link>
+          <Link to="/redux-demo">redux-demo</Link>
         </li>
         <li>
-          <Link to="/swr/multi-child">swr/multi-child</Link>
+          <Link to="/style">style demo</Link>
         </li>
       </ul>
       <Outlet />
