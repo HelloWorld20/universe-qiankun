@@ -43,8 +43,6 @@ const root = createRoot(container!);
 
 export default function render({ loading }: any) {
   if (container) {
-    console.log("render call", container);
-
     root.render(<Render loading={loading} />);
   } else {
     throw new Error("不存在 <div id='subapp-container'></div> 节点.");

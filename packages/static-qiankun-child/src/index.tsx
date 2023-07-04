@@ -11,6 +11,9 @@ import React from "react";
 // import { unmountComponentAtNode } from "react-dom";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
+import GlobalStore from "./store/global/global-store";
+import localStore from "./store/store";
+import GlobalStoreContext from "./store/global/context";
 // import ReactDOM from "react-dom";
 import Route from "./route";
 
@@ -29,11 +32,24 @@ function getRoot(container: any) {
 // //将渲染过程封装，以便使用
 function render(props: any) {
   const { container } = props;
-  getRoot(container).render(
-    <Provider store={props.store}>
-      <Route />
-    </Provider>
-  );
+  const { store } = props;
+
+  if (store) {
+    const globalStore = new GlobalStore(store);
+    getRoot(container).render(
+      <Provider store={localStore}>
+        <GlobalStoreContext.Provider value={globalStore}>
+          <Route />
+        </GlobalStoreContext.Provider>
+      </Provider>
+    );
+  } else {
+    getRoot(container).render(
+      <Provider store={localStore}>
+        <Route />
+      </Provider>
+    );
+  }
 }
 
 export async function bootstrap() {
@@ -41,8 +57,6 @@ export async function bootstrap() {
 }
 
 export async function mount(props: any) {
-  console.log("child mount", props);
-
   render(props);
 }
 
@@ -51,7 +65,6 @@ export async function unmount(props: any) {
 
   const { container } = props;
   getRoot(container).unmount();
-  console.log("micro-one uninstall..");
   /** 这个地方切记要重置为未定义 */
   root = undefined;
 }
