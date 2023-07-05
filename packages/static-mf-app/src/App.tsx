@@ -10,11 +10,15 @@
 import React from "react";
 import request from "utils_web_app/request";
 console.log(
-  "%c [ request ]-12",
+  "%c [ request 11 ]-12",
   "font-size:13px; background:pink; color:#bf2c9f;",
-  request
+  request.version
 );
 
 export default function () {
-  return <h1>foo</h1>;
+
+  return <h1>foo111
+    <br/>
+    {request.version}
+  </h1>;
 }

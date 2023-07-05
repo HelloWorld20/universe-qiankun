@@ -9,13 +9,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 
-// 我的demo
-// webpack/container/reference/utils_web_app 实际有的值
-// webpack/container/remote/utils_web_app/request 读取了，说明读取错了。
-
-// 好的demo
-// webpack/container/reference/lib-app
-
 module.exports = {
   entry: "./src/index.ts",
   mode: "development",
@@ -25,10 +18,14 @@ module.exports = {
     publicPath: "http://localhost:8081/",
     // publicPath:
     //   "https://test-1258538316.cos.ap-guangzhou.myqcloud.com/module-federation/static-mf-app/",
-    clean: true,
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
+  devServer: {
+    port: 8081,
+    hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [

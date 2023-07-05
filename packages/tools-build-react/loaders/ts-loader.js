@@ -1,5 +1,5 @@
-const path = require("path");
 const tsImportPluginFactory = require("ts-import-plugin");
+console.log('%c [ tsImportPluginFactory ]-2', 'font-size:13px; background:pink; color:#bf2c9f;', tsImportPluginFactory)
 
 // 编译typescript
 module.exports = function (env, configs) {

@@ -14,5 +14,9 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 
 const root = document.querySelector("#app");
-console.log('root')
 createRoot(root!).render(<App />);
+
+if (process.env.NODE_ENV === "development") {
+  const HMR = (module as any).hot;
+  HMR && HMR.accept && HMR.accept();
+}

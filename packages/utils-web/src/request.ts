@@ -58,6 +58,8 @@ export const del = function <T = any>(url: string, options: AxiosRequestConfig =
   return fetch<T>("DELETE", url, options);
 };
 
+export const version = "1.0.0";
+
 export default {
-  fetch, get, post, put, del
+  fetch, get, post, put, del, version
 }

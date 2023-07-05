@@ -6,15 +6,20 @@
  *
  * Copyright © 2014-2023 Rabbitpre.com. All Rights Reserved.
  */
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const pkg = require("./package.json");
 
 module.exports = {
   mode: "development",
-
+  entry: "./src/index.ts",
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
+  devServer: {
+    port: 8080,
+    hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -71,8 +76,8 @@ module.exports = {
       //     "lib-app": "lib_app@http://localhost:3000/remoteEntry.js",
       //   },
     }),
-    // new HtmlWebpackPlugin({
-    //   template: "./public/index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
   ],
 };
